@@ -8247,3 +8247,42 @@ Customer API
                 "created_at": "2019-01-20T10:51:28.511Z"
             }
         ]
+
+### Create New Task [POST]
++ Request (application/json)
+
+        {
+            "task": {
+                "name": "Hitung Rokok Dji Sam Sul",
+                "start_date": "2019-09-04T17:00:00.000Z",
+                "end_date": "2019-09-08T17:00:00.000Z",
+                "reward": 150000,
+                "reward_type": "saldo",
+                "reward_expired_date": "2019-09-09T17:00:00.000Z",
+                "notes": "Tolong perbaiki, ada yang typo"
+            },
+            "project": {
+                "code": "003",
+                "start_date": "2019-03-16T22:41:58.464Z",
+                "end_date": "2019-05-24T19:45:15.651Z"
+            },
+            "form": {
+                "code": "AAC002"
+            },
+            "respondent": {
+                "code": "RES002",
+                "limit": 500
+            }
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /task/add
+
+    + Body
+
+            {
+                "message": "Success"
+            }
